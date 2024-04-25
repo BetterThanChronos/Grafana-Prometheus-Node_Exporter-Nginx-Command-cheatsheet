@@ -1,4 +1,4 @@
-Nginx Install
+# Nginx Install
 
 - sudo apt install nginx
 - sudo systemctl start nginx
