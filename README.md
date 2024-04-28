@@ -1,8 +1,3 @@
-# Nginx Install
-
-- sudo apt install nginx
-- sudo systemctl start nginx
-- sudo systemctl status nginx
 # Grafana Install
 
 - sudo apt-get install -y adduser libfontconfig1
@@ -123,5 +118,3 @@ WantedBy=multi-user.target
 - sudo systemctl enable prometheus
 - sudo systemctl start prometheus
 - sudo systemctl status prometheus
-
-- sudo ufw allow 9090/tcp
