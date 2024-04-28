@@ -5,16 +5,6 @@ status_message() {
     echo "==> $@"
 }
 
-# Instalación de Nginx
-status_message "Instalando Nginx..."
-sudo apt install nginx -y
-
-# Iniciar y verificar el estado de Nginx
-status_message "Iniciando Nginx..."
-sudo systemctl start nginx
-status_message "Estado de Nginx:"
-sudo systemctl status nginx
-
 # Instalación de Grafana
 status_message "Instalando Grafana..."
 sudo apt-get install -y adduser libfontconfig1
@@ -115,9 +105,5 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 status_message "Estado de Prometheus:"
 sudo systemctl status prometheus
-
-# Permitir el tráfico en el puerto 9090 para Prometheus
-status_message "Permitiendo el tráfico en el puerto 9090 para Prometheus..."
-sudo ufw allow 9090/tcp
 
 status_message "Instalación completada."
